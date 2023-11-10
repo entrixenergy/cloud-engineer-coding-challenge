@@ -8,12 +8,12 @@ logger = logging.getLogger()
 TABLE_NAME = os.environ['DYNAMODB_TABLE_NAME']
 
 
-def save_to_db(records: dict[str, Any]):
+def save_to_db(records: list[dict[str, Any]]):
     """Save records to the DynamoDB table.
 
     Parameters
     ----------
-    records: dict[str, Any]
+    records: list[dict[str, Any]]
         The data to save to DynamoDB.
     """
     # saving records to the dynamoDB, let's assume it is successful
